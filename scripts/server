@@ -11,9 +11,6 @@ function on_quit {
 
 trap on_quit EXIT
 
-# Clean-up any pyc files
-find bootstrap -name "*.pyc" -exec rm -rf {} \;
-
 # Run the server
 ./scripts/using-profile dev server &
 
