@@ -7,14 +7,14 @@ provides a basic structure.
 Oz bootstrap is a very opinionated scaffolding for oz-based applications. It
 provides you with:
 
-# A basic package structure
-# Scripts for working in a virtualenv-based setup
-# HTML5-based templates
-# Coffeescript
-# SASS
-# Bootstrap
-# jquery
-# modernizr
+* A basic package structure
+* Scripts for working in a virtualenv-based setup
+* HTML5-based templates
+* Coffeescript
+* SASS
+* Bootstrap
+* jquery
+* modernizr
 
 ## Initial Setup ##
 
