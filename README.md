@@ -25,6 +25,11 @@ First install SASS and coffeescript. Then:
     virtualenv --no-site-packages .
     ./scripts/update-dependencies
 
+You'll probably want to rename the python namespace to something other than
+`bootstrap`. To do so, you'll need to rename the folder, references to the
+`bootstrap` namespace in the python code, and the `project_name` variable in
+`config.py`.
+
 ## Running The Server ##
 
 Just run `./scripts/server`
