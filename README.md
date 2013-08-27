@@ -20,7 +20,7 @@ provides you with:
 
 First install SASS and coffeescript. Then:
 
-    git clone https://github.com/dailymuse/oz-bootstrap.git
+    git clone https://github.com/ysimonson/oz-bootstrap.git
     cd oz-bootstrap
     virtualenv --no-site-packages .
     ./scripts/update-dependencies
