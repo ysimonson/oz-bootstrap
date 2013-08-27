@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Runs the server with live compilation of sass/coffeescript
+set -e
+set -a
+
+# Close all child processes on exit
+function on_quit {
+    kill `jobs -p`
+}
+
+trap on_quit EXIT
+
+# Clean-up any pyc files
+find bootstrap -name "*.pyc" -exec rm -rf {} \;
+
+# Run the server
+./scripts/using-profile dev server &
+
+# Start SASS/coffee live compilation
+sass --watch assets/sass:static/css --no-cache &
+(cd static && coffee --watch --map --output js ../assets/coffeescript &)
+
+while true; do read x; done

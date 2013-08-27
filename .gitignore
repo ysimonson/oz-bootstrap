@@ -1,0 +1,10 @@
+*.py[cod]
+.Python
+.DS_Store
+
+/bin
+/include
+/lib
+
+/static/css
+/static/js
