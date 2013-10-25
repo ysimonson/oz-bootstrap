@@ -16,6 +16,6 @@ trap on_quit EXIT
 
 # Start SASS/coffee live compilation
 sass --watch assets/sass:static/css --no-cache &
-(cd static && coffee --watch --map --output js ../assets/coffeescript &)
+coffee --watch --output static/js assets/coffeescript &
 
 while true; do read x; done
