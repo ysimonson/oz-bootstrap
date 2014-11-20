@@ -2,10 +2,9 @@
 .Python
 .DS_Store
 
-/bin
-/include
-/lib
+/venv
 
+/bower_components
 /static/css
 /static/js
 /static/lib

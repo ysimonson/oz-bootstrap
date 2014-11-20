@@ -4,6 +4,47 @@
 set -e
 set -a
 
+# Utility function to copy an entire lib's folder from bower_components to a
+# static/lib. Use this function if a lib installed by bower has a dist dir.
+# 
+# Example:
+#   distdir bootstrap dist
+# Will copy bower_components/bootstrap/dist to static/lib/bootstrap
+function distdir {
+    cp -r bower_components/$1/$2 static/lib/$1
+}
+
+# Utility function to selectively copy files from a lib in bower_components to
+# static/lib. Use this function if a lib installed by bower components does
+# not have a dist dir.
+# 
+# Example:
+#   dist d3 d3.js d3.min.js
+# Will copy bower_Components/d3/d3.js->static/lib/d3/d3.js and
+# bower_components/d3/d3.min.js->static/lib/d3/d3.min.js
+function dist {
+    libname=$1
+    shift
+
+    mkdir static/lib/$libname
+
+    for relpath in "$@"; do
+        cp -r bower_components/$libname/$relpath static/lib/$libname
+    done
+}
+
 source venv/bin/activate
+
+# Install python dependencies
 pip install -r requirements.txt
+
+# Fetch javascript dependencies
 bower install
+
+# Add any build steps required for javascript libs here. They must be copied
+# from their staging location (bower_componentss) to static/lib so they can be
+# served to the client.
+rm -rf static/lib
+mkdir static/lib
+distdir jquery dist
+distdir bootstrap dist
