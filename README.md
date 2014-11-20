@@ -22,7 +22,7 @@ First install SASS and coffeescript. Then:
 
     git clone https://github.com/ysimonson/oz-bootstrap.git
     cd oz-bootstrap
-    virtualenv --no-site-packages .
+    virtualenv --no-site-packages venv
     ./scripts/update-dependencies
 
 You'll probably want to rename the python namespace to something other than

@@ -4,7 +4,7 @@
 set -e
 set -a
 
-source bin/activate
+source venv/bin/activate
 
 PROFILE_FILE=env/$1.env
 
