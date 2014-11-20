@@ -14,7 +14,6 @@ provides you with:
 * SASS
 * Bootstrap
 * jquery
-* modernizr
 
 ## Initial Setup ##
 
