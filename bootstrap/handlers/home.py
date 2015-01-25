@@ -1,4 +1,4 @@
-import base
+from . import base
 import tornado
 
 class HomeHandler(base.BaseHandler):

@@ -17,11 +17,11 @@ provides you with:
 
 ## Initial Setup ##
 
-First install SASS and coffeescript. Then:
+First install SASS, coffeescript and bower. Then:
 
     git clone https://github.com/ysimonson/oz-bootstrap.git
     cd oz-bootstrap
-    virtualenv --no-site-packages venv
+    virtualenv -p python3 venv
     ./scripts/update-dependencies
 
 You'll probably want to rename the python namespace to something other than

@@ -3,7 +3,7 @@ import os
 project_name = "bootstrap"
 
 plugins = [
-    "oz.plugins.core",
+    "oz.core",
     project_name,
 ]
 
