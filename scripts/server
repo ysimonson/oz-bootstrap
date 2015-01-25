@@ -15,7 +15,10 @@ trap on_quit EXIT
 ./scripts/using-profile dev server &
 
 # Start SASS/coffee live compilation
-sass --watch assets/sass:static/css --no-cache &
-coffee --watch --output static/js assets/coffeescript &
+sass --watch static/sass:static/css &
+
+pushd static
+    coffee --watch --map --output js coffeescript &
+popd
 
 while true; do read x; done

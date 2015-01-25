@@ -8,3 +8,5 @@
 /static/css
 /static/js
 /static/lib
+
+/.sass-cache
